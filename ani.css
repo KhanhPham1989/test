@@ -1,0 +1,129 @@
+#animated{
+    width:200px;
+    height:80px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    color:brown;
+    text-align: center;
+    position: relative;
+    font-weight:bold;
+    font-size:4rem;
+    padding:10px;
+    animation:
+    xoay 6s 1,
+    mau 3s infinite 6s;
+    } 
+    @keyframes xoay 
+    {
+        0% {transform: rotate(0deg);left: 0;}
+        25% {transform: rotate(-20deg);left: 0;}
+        50% {transform: rotate(20deg);left: -40%;}   
+        75% {transform: rotate(0deg);left:40%;}
+        80% {transform: rotate(0deg);left:40%;color:greenyellow;}
+        100% {transform: rotate(-360deg);left:0px;}
+        
+    }
+    @keyframes mau 
+    {
+        0% {color:brown;}
+        50% {color: yellowgreen;}
+        100% {color: brown;}
+    } 
+
+    .content h2{ 
+      font-size:2.5rem;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: bolder;
+      margin-top: 12px;
+    }
+
+    .bo{
+      display: block;
+      position: relative;
+      width: 170px;
+      height: 60px;
+      overflow: hidden;
+      box-shadow: 3px 3px 3px gray;
+      color: brown;
+      font-weight: bold;
+    }
+    .bo .content{
+      position:absolute;
+      top:5px;
+      left:5px; 
+      right:5px;
+      bottom:5px;
+      border:1px solid burlywood;
+      text-align:center;
+    }
+    
+    .bo span{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      box-sizing: border-box;
+    }
+    
+    .bo span:nth-child(1)
+    {
+      transform:rotate(0deg);
+    }
+    
+    .bo span:nth-child(2)
+    {
+      transform:rotate(90deg);
+      left: 90px;
+      width: 100px;
+      
+    }
+    
+    .bo span:nth-child(3)
+    {
+      transform:rotate(180deg);
+    }
+    
+    .bo span:nth-child(4)
+    {
+      transform:rotate(270deg);
+      left: -20px;
+      width: 100px;
+    }
+   
+    .bo span:before
+    {
+      content: '';
+      position: absolute;
+      width:100%;
+      height: 2px;
+      background:brown;
+      animation: animate 4s linear infinite;
+    }
+    
+    @keyframes animate {
+      0% {
+      transform:scaleX(0);
+      transform-origin: left;
+      }
+      50%
+      {
+        transform:scaleX(1);
+      transform-origin: left;
+      }
+      50.1%
+      {
+        transform:scaleX(1);
+      transform-origin: right;
+        
+      }
+      
+      100%
+      {
+        transform:scaleX(0);
+      transform-origin: right;
+      }
+
+    } 

@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="ani.css">
+    <style>
+        body {
+            background-image: url(./img/nghia/world.png);
+            background-blend-mode: difference;
+
+        }
+
+        header {
+            position: fixed;
+            z-index: 10000;
+            width: 100%;
+
+        }
+
+        .hea {
+            height: 12rem;
+        }
+
+        .logo {
+            height: 100%;
+            margin: 0 auto 0 auto;
+
+        }
+
+        nav {
+            font-size: 2rem;
+            padding: 2rem;
+
+        }
+
+        .navbar {
+            background-color: lightgray;
+            padding-left: 5rem;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            padding: 2px;
+            width: 80px;
+        }
+       
+
+        .red {
+            color: rgb(119, 22, 22);
+            font-weight: bolder;
+
+        }
+        .red:hover{
+            font-size: x-large;
+        }
+
+        iframe {
+            display: block;
+            width: 100%;
+            margin: 2rem auto 2rem auto;
+        }
+
+        footer {
+            background-color: rgb(119, 22, 22);
+            color: white;
+            padding: 2rem;
+            margin-top: 200px;
+
+        }
+
+        footer div {
+            text-align: center;
+        }
+
+        footer h2 {
+            font-weight: bold;
+        }
+
+        .get input {
+            width: 100%;
+        }
+
+        .get {
+            margin: 2rem;
+        }
+
+        .geth div {
+            margin-top: 1rem;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+
+        .full {
+            width: 100%;
+        }
+
+        .image {
+            width: 70%;
+            padding: 1.5rem;
+            border: solid lightgray medium;
+            display: block;
+            margin: auto;
+        }
+
+        .image:hover {
+            width: 70%;
+            padding: 1.5rem;
+            border: solid gray medium;
+            display: block;
+            margin: auto;
+            box-shadow: grey 1rem 1rem 1rem;
+            border-radius: 3%;
+        
+        }
+
+        .divimage {
+            text-align: center;
+            
+            margin-top: 2rem;
+        }
+
+        .box,
+        .box2 {
+            margin-left: 2rem;
+        }
+
+        /* .ani {
+            width: 25px;
+            height: 15px;
+            border-radius: 20%;
+            background-color: brown;
+            position: relative;
+            animation-name: example;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes example {
+            0% {
+                left: 0px;
+                top: 0px;
+            }
+
+            50% {
+                left: 100%;
+                top: 0px;
+            }
+
+            100% {
+                ;
+                left: 0px;
+                top: 0px;
+            }
+        } */
+
+        img {
+            width: 100%;
+        }
+
+        .modal-dialog {
+            width: 60%;
+        }
+
+        /* .center {
+            text-align: center;
+            font-weight: bolder;
+            color: brown;
+            font-size: 5rem;
+            animation-name: exa;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+ 
+
+        }
+
+        @keyframes exa {
+            0% {
+                color: chartreuse;
+            }
+
+            50% {
+                color: coral
+            }
+
+            100% {
+                color: brown;
+            }
+        } */
+
+        .cata {
+            padding-left: 4%;
+            font-size: 2rem;
+        }
+        .ten{
+            color: brown;
+            margin-left: 1rem;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+   
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+        .fa-facebook {      
+            color: white;
+            }
+        .fa-twitter {   
+             color: white;
+            }
+        
+
+        .btn-top {
+            bottom: 20px;
+            cursor: pointer;
+            padding: 0;
+            position: fixed;
+            right: 20px;
+            z-index: 9999;
+        }
+        .glyphicon-circle-arrow-up{
+            font-size: 5rem;
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="logo" src="" alt=""></a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="home.html"><span class="red">Home</span> </a></li>
+                    <li><a href="museum.html"><span class="red note">Museum</span></a></li>
+
+                    <!-- <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown"><span class="red">Museum</span> <b
+                                class="caret"></b></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="/eP/world.html"><span class="red">WORLD</span></a></li>
+                            <li><a href="/eP/vietnam.html"><span class="red">VIETNAM</span></a></li>
+                        </ul>
+                    </li> -->
+                    <li><a href="gallery.html"><span class="red">Gallery</span></a></li>
+                    <li><a href="aboutus.html"><span class="red">About us</span></a></li>
+                    <li><a href="contact.html"><span class="red">Contact us</span></a></li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                </ul>
+
+            </div>
+        </nav>
+        <div class="ani"></div>
+    </header>
+    <div class="hea"></div>
+    <section>
+        <div class="container full">
+
+            <div class="page-header">
+                <div id="animated">MUSEUMS</div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-2 cata">
+
+                    <div class="bo">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <div class="content">
+                          <h2>Categories </h2>  
+                        </div>  
+                    </div>
+                    <!-- <h3 >Categories</h3> -->
+                    <hr>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" value="wor" id="chk-mu" >
+                            On the world
+                        </label>
+                    </div>
+
+                    <div class="box">
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="aa" id="chk" name="mus">
+                                Asia
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="au" id="chk" name="mus">
+                                Europe
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="my" id="chk" name="mus">
+                                Americas
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="phi" id="chk" name="mus">
+                                Africa
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="uc" id="chk" name="mus">
+                                Australia
+                            </label>
+                        </div>
+
+
+                    </div>
+
+                    <div>
+                        <label>
+                            <input type="checkbox" value="vn" id="chk-mu2" class="c" name="cat">
+                            Viet Nam
+                        </label>
+                    </div>
+
+                    <div class="box2">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="bac" id="chk2" name="mus">
+                                In the Northern Vietnam
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="trung" id="chk2" name="mus">
+                                In the central of Vietnam
+                            </label>
+                        </div>
+
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" value="nam" id="chk2" name="mus">
+                                In the Southern Vietnam
+                            </label>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-10">
+                    <div class="row" id="muse">
+
+                        <!-- <div class="col-sm-6 col-md-4 divimage">
+                            <img src="/eP/cake/1.PNG" class="image">
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="btn-top" title="Top" style="display: inline;"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+    </section>
+    <footer>
+
+        <div class="row">
+            <div class="col-md-4 ">
+                <h2>CONTACT US</h2>
+                <p><span class="glyphicon glyphicon-map-marker"> </span> 590 Cach Mang Thang Tam,District 3, Ho Chi Minh
+                    City</p>
+                <p>(Behind Cho Lon Electronics Supermarket)</p><br>
+                <p><span class="glyphicon glyphicon-earphone"> </span> (028) 888 888</p> <br>
+                <p><span class="glyphicon glyphicon-envelope"> </span> aptech.fpt@fe.edu.vn</p><br>
+                <p><span class="glyphicon glyphicon-globe"> </span> https://hkn.com</p>
+
+            </div>
+
+            <div class="col-md-4 ">
+                <h2>SERVICES</h2>
+                <P>Downloads informartion</P>
+                <p>How to travel</p>
+
+            </div>
+
+            <div class="col-md-4">
+                <h2>LINKS</h2>
+                <p>About us</p>
+                <p>Gallery</p>
+                <p>World Museum</p>
+                <p>VietNam Museum</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog" style="margin-top: 10rem;">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <!-- <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+
+
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class=" btn btn-success" value="Download">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var data = [];
+            var data1 = [];
+            var data2 = [];
+            var temp1 = [];
+            var temp2 = [];
+            var dat1 = [];
+            var dat2 = [];
+            
+            $.getJSON("./JSON/data.json", function (items) {
+                data1 = items;
+
+            });
+            $.getJSON("./JSON/data1.json", function (items1) {
+                data2 = items1;
+
+                data = data2.concat(data1);
+                displayImages(data);
+            });
+
+
+            $(".btn-top").click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			})
+		    })
+
+
+            // world
+            $(".box").hide();
+
+            $("input[id=chk-mu]").click(function () {
+                let catss = $('input[id=chk-mu2]').prop('checked');
+                let cats = $("#chk-mu:checked").map(function () { return $(this).val() }).toArray().toString();
+                let subdata
+                if (cats.length == 0) {
+                    if (catss == false) {
+                        displayImages(data);
+                        $(".box").hide();
+                        $('input[id=chk]').prop('checked', false);
+
+                    }
+                    else {
+                        $(".box").hide();
+                        $('input[id=chk]').prop('checked', false);
+                        dat1 = temp1;
+                        displayImages(dat1);
+                    }
+                    temp2 = [];
+                }
+                else {
+                    $(".box").show();
+                    subdata = data2.filter(item => cats.search(item.z) >= 0);
+                    dat1 = subdata.concat(temp1);
+                    temp2 = subdata
+                    displayImages(dat1);
+                }
+
+
+                $("input[id=chk]").click(function () {
+
+                    let kats = $("#chk:checked").map(function () { return $(this).val() }).toArray().toString();
+
+                    subdata = (kats.length == 0) ? data2 : data2.filter(item => kats.search(item.kv) >= 0);
+                    dat1 = subdata.concat(temp1);
+                    temp2 = subdata
+                    displayImages(dat1);
+                });
+            });
+
+            // VN
+
+            $(".box2").hide();
+
+            $("input[id=chk-mu2]").click(function () {
+                let catss = $('input[id=chk-mu]').prop('checked');
+                let cats = $("#chk-mu2:checked").map(function () { return $(this).val() }).toArray().toString();
+                let subdata
+                if (cats.length == 0) {
+                    if (catss == false) {
+
+                        $(".box2").hide();
+                        $('input[id=chk2]').prop('checked', false);
+                        displayImages(data);
+                    }
+                    else {
+                        $(".box2").hide();
+                        $('input[id=chk2]').prop('checked', false);
+                        dat2 = temp2;
+                        displayImages(dat2);
+                    }
+                    temp1 = [];
+                }
+                else {
+                    $(".box2").show();
+                    subdata = data1.filter(item => cats.search(item.z) >= 0);
+                    dat2 = temp2.concat(subdata);
+                    displayImages(dat2);
+                    temp1 = subdata
+                }
+                $("input[id=chk2]").click(function () {
+
+                    let kats = $("#chk2:checked").map(function () { return $(this).val() }).toArray().toString();
+
+                    subdata = (kats.length == 0) ? data1 : data1.filter(item => kats.search(item.kv) >= 0);
+
+                    dat2 = temp2.concat(subdata);
+                    temp1 = subdata
+                    displayImages(dat2);
+                });
+            });
+            $(document).on('click', ".divimage", function () {
+                let zz = $(this).data('idsa')
+                let product = data.filter(ele => ele.ida == zz)
+
+                setModal(product[0])
+                $('#myModal').modal('show');
+            })
+
+
+        });
+
+
+
+        function displayImages(items) {
+            let s = ``;
+
+            $.each(items, function (k, v) {
+
+                s += ` <div class="col-sm-6 col-md-4 divimage" data-idsa="${v.ida}">
+                            <img src="./img/nghia/${v.pic}" class="image">
+                            <p>
+                            ${v.ten} <br>
+
+                        </p> 
+                        </div> `;
+
+            });
+
+            $("#muse").html(s);
+
+        }
+
+        function setModal(m) {
+            let x = `
+            <div class="modal-header">
+                <span class="ten">${m.ten}</span>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+             </div>
+                <div class="modal-body">
+                    <div class="row ">
+                        <div class="col-md-4"><img src="./IMG/IMG-Nghia/${m.pic}"></div>
+                        <div class="col-md-8 text-justify">${m.nd}</div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-8 text-justify">${m.nd1}</div>
+                        <div class="col-md-4"><img src="./IMG/IMG-Nghia\ 2/${m.pic1}"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4"><img src="./IMG/IMG-Nghia\ 2/${m.pic2}"></div>
+                        <div class="col-md-8 text-justify">${m.nd2}</div>
+                    </div> 
+                </div>
+                <div class="modal-footer">
+                    <input type="button" class=" btn btn-success" value="Download" >
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>    
+            `;
+
+            $('.modal-content').html(x)
+        }
+    </script>
+</body>
+
+</html>

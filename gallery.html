@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+         body {
+            background-image: url(./IMG/IMG-Nghia/world.png);
+            background-blend-mode: difference;
+
+        }
+        header {
+            position: fixed;
+            z-index: 10000;
+            width: 100%;
+            
+        }
+        .hea{
+            height: 12rem;
+        }
+
+        .logo {
+            height: 100%;
+            margin: 0 auto 0 auto;
+
+        }
+
+        nav {
+            font-size: 2rem;
+            padding: 2rem;
+
+        }
+
+        .navbar {
+            background-color: lightgray;
+            padding-left: 5rem;
+            margin-bottom: 0;
+        }
+
+        .navbar-brand {
+            padding: 2px;
+            width: 80px;
+        }
+       
+
+        .red {
+            color: rgb(119, 22, 22);
+            font-weight: bolder;
+
+        }
+        .red:hover{
+            font-size: x-large;
+        }
+
+
+        iframe {
+            display: block;
+            width: 100%;
+            margin: 2rem auto 2rem auto;
+        }
+
+        footer {
+            background-color: rgb(119, 22, 22);
+            color: white;
+            padding: 2rem;
+            margin-top: 200px;
+            
+        }
+
+        footer div {
+            text-align: center;
+        }
+
+        footer h2 {
+            font-weight: bold;
+        }
+
+        .get input {
+            width: 100%;
+        }
+
+        .get {
+            margin: 2rem;
+        }
+
+        .geth div {
+            margin-top: 1rem;
+        }
+
+        .bold {
+            font-weight: bolder;
+        }
+
+        .full {
+            width: 90%;
+        }
+
+        .image {
+            width: 100%;
+            padding: 1.5rem;
+            border: solid lightgray medium;
+            display: block;
+            margin: auto;
+            
+        }
+
+        .divimage {
+            text-align: center;
+            display: inline-block;
+            clear: ;
+            
+        }
+
+        .box,
+        .box2 {
+            margin-left: 2rem;
+        }
+        .ani{
+            width: 25px;
+            height: 15px;
+            border-radius: 20%;
+            background-color: brown;
+            position: relative;
+            animation-name: example;
+            animation-duration: 6s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes example {
+        0%   {left:0px; top:0px;}
+        50%  {left:100%; top:0px;}
+        100% {; left:0px; top:0px;}
+        }
+
+        .so{
+            text-align: center;
+            
+        }
+        .btn-top {
+            bottom: 20px;
+            cursor: pointer;
+            padding: 0;
+            position: fixed;
+            right: 20px;
+            z-index: 9999;
+        }
+        .glyphicon-circle-arrow-up{
+            font-size: 5rem;
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+    <nav class="navbar navbar-default" role="navigation" >
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html"><img class="logo" src="Untitled-1.png" alt=""></a>
+        </div>
+
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="home.html" ><span class="red">Home</span>  </a></li>
+                <li><a href="museum.html"><span class="red">Museum</span></a></li>
+
+                <!-- <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"><span class="red">Museum</span> <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                       
+                        <li><a href="/eP/world.html"><span class="red">WORLD</span></a></li>
+                        <li><a href="/eP/vietnam.html"><span class="red">VIETNAM</span></a></li>
+                    </ul>
+                </li> -->
+                <li><a href="gallery.html"><span class="red">Gallery</span></a></li>
+                <li><a href="aboutus.html"><span class="red">About us</span></a></li>
+                <li><a href="contact.html"><span class="red">Contact us</span></a></li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+            </ul>
+
+        </div>
+    </nav>
+    <div class="ani"></div>
+
+    </header>
+    <div class="hea"></div>
+    <section>
+        <div class="container full">
+            <div class="page-header">
+                <h1 style="padding-top: 2rem;">GALLERY</h1>
+            </div>
+            <div class="row" id="muse">
+                
+            </div>
+            <div class="so">
+                <ul class="pagination">
+               
+                </ul>
+            </div>
+        </div>
+        <a class="btn-top" title="Top" style="display: inline;"><span class="glyphicon glyphicon-circle-arrow-up"></span></a>
+    </section>
+    </section>
+    <footer>
+       
+            <div class="row">
+                <div class="col-md-4 ">
+                    <h2>CONTACT US</h2>
+                    <p><span class="glyphicon glyphicon-map-marker"> </span> 590 Cach Mang Thang Tam,District 3, Ho Chi Minh City</p>
+                    <p>(Behind Cho Lon Electronics Supermarket)</p><br> 
+                    <p><span class="glyphicon glyphicon-earphone"> </span> (028) 888 888</p> <br>
+                    <p><span class="glyphicon glyphicon-envelope"> </span> aptech.fpt@fe.edu.vn</p><br>
+                    <p><span class="glyphicon glyphicon-globe"> </span> https://hkn.com</p>
+
+                </div>
+
+                <div class="col-md-4 ">
+                    <h2>SERVICES</h2>
+                    <P>Downloads informartion</P>
+                    <p>How to travel</p>
+
+                </div>
+
+                <div class="col-md-4">
+                    <h2>LINKS</h2>
+                    <p>About us</p>
+                    <p>Gallery</p>
+                    <p>World Museum</p>
+                    <p>VietNam Museum</p>
+                </div>
+            </div>
+        
+    </footer>
+    <script>
+        let data = [];
+        let itemsPerPage = 12;
+        let page = 1;
+
+        $(document).ready(function () {
+
+            $.getJSON("./JSON/data2.json", function (items) {
+                data = items;
+                displayImages(data, page);
+                displayPagination(data)
+
+            });
+
+            //lap trinh cho su kien click so trang tren cac the a
+            $(document).on('click', "#link", function (e) {
+                e.preventDefault(); // vo hieu hoa chuc nang lien ket trang cua the a
+
+                let page_no = $(this).data('id');
+              
+                displayImages(data,  page_no);
+
+            })
+            $(".btn-top").click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			})
+		    })
+
+        });
+
+
+        //ham hien thi so nut phan trang theo tong so pt trong data
+        function displayPagination(data){
+            let n = data.length / itemsPerPage;
+
+            let s =`<li><a href="#" id="link" data-id="1">&laquo;</a></li>`;
+            for(let i= 1; i <=n; i++){
+                s += `<li><a href="#" id="link" data-id="${i}">${i}</a></li>`;
+            }
+            s+=`<li><a href="#" id="link" data-id="${n}">&raquo;</a></li>`;
+
+            $(".pagination").html(s);
+
+        }
+
+        function displayImages(data, page) {
+            let s = ``;
+
+
+            let startItem = (page - 1) * itemsPerPage;
+            let stopItem = startItem + itemsPerPage;
+
+            for (let i = startItem; i < stopItem; i++) {
+                s += `<div class="col-sm-4 col-md-3 divimage" data-id="${data[i].id}">
+                        <img src="./IMG/IMG-Nghia\ 2/${data[i].pic}" alt="" class="image">
+                    </div> `;
+            }
+
+            $("#muse").html(s);
+
+        }
+
+    </script>
+</body>
+
+</html>
